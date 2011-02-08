@@ -1,0 +1,1454 @@
+--- 
+Standard Colors: 
+- - Almond
+  - "#EFDECD"
+  - - 239
+    - 222
+    - 205
+  - 1998
+  - 
+  - 
+- - Antique Brass
+  - "#CD9575"
+  - - 205
+    - 149
+    - 117
+  - 1998
+  - 
+  - Metallic.
+- - Apricot
+  - "#FDD9B5"
+  - - 253
+    - 217
+    - 181
+  - 1949
+  - 
+  - 
+- - Aquamarine
+  - "#78DBE2"
+  - - 120
+    - 219
+    - 226
+  - 1958
+  - 
+  - 
+- - Asparagus
+  - "#87A96B"
+  - - 135
+    - 169
+    - 107
+  - 1993
+  - 
+  - 
+- - Atomic Tangerine
+  - "#FFA474"
+  - - 255
+    - 164
+    - 116
+  - 1972
+  - 
+  - 1990
+- - Banana Mania
+  - "#FAE7B5"
+  - - 250
+    - 231
+    - 181
+  - 1998
+  - 
+  - 
+- - Beaver
+  - "#9F8170"
+  - - 159
+    - 129
+    - 112
+  - 1998
+  - 
+  - 
+- - Bittersweet
+  - "#FD7C6E"
+  - - 253
+    - 124
+    - 110
+  - 1949
+  - 
+  - 
+- - Black
+  - "#000000"
+  - - 0
+    - 0
+    - 0
+  - 1903
+  - 
+  - 
+- - Blizzard Blue
+  - "#ACE5EE"
+  - - 172
+    - 229
+    - 238
+  - 1972
+  - 2003
+  - 1990
+- - Blue
+  - "#1F75FE"
+  - - 31
+    - 117
+    - 254
+  - 1903
+  - 
+  - 
+- - Blue Bell
+  - "#A2A2D0"
+  - - 162
+    - 162
+    - 208
+  - 1998
+  - 
+  - 
+- - Blue Gray
+  - "#6699CC"
+  - - 102
+    - 153
+    - 204
+  - 1958
+  - 1990
+  - 
+- - Blue Green
+  - "#0D98BA"
+  - - 13
+    - 152
+    - 186
+  - 1949
+  - 
+  - 
+- - Blue Violet
+  - "#7366BD"
+  - - 115
+    - 102
+    - 189
+  - 1949
+  - 
+  - 
+- - Blush
+  - "#DE5D83"
+  - - 222
+    - 93
+    - 131
+  - 1998
+  - 
+  - 2000
+- - Brick Red
+  - "#CB4154"
+  - - 203
+    - 65
+    - 84
+  - 1949
+  - 
+  - 
+- - Brown
+  - "#B4674D"
+  - - 180
+    - 103
+    - 77
+  - 1903
+  - 
+  - 
+- - Burnt Orange
+  - "#FF7F49"
+  - - 255
+    - 127
+    - 73
+  - 1958
+  - 
+  - 
+- - Burnt Sienna
+  - "#EA7E5D"
+  - - 234
+    - 126
+    - 93
+  - 1949
+  - 
+  - 
+- - Cadet Blue
+  - "#B0B7C6"
+  - - 176
+    - 183
+    - 198
+  - 1958
+  - 
+  - 
+- - Canary
+  - "#FFFF99"
+  - - 255
+    - 255
+    - 153
+  - 1998
+  - 
+  - 
+- - Caribbean Green
+  - "#1CD3A2"
+  - - 28
+    - 211
+    - 162
+  - 1998
+  - 
+  - 
+- - Carnation Pink
+  - "#FFAACC"
+  - - 255
+    - 170
+    - 204
+  - 1949
+  - 
+  - 
+- - Cerise
+  - "#DD4492"
+  - - 221
+    - 68
+    - 146
+  - 1993
+  - 
+  - 
+- - Cerulean
+  - "#1DACD6"
+  - - 29
+    - 172
+    - 214
+  - 1990
+  - 
+  - 
+- - Chestnut
+  - "#BC5D58"
+  - - 188
+    - 93
+    - 88
+  - 1958
+  - 
+  - 1999
+- - Copper
+  - "#DD9475"
+  - - 221
+    - 148
+    - 117
+  - 1958
+  - 
+  - Metallic.
+- - Cornflower
+  - "#9ACEEB"
+  - - 154
+    - 206
+    - 235
+  - 1949
+  - 
+  - 
+- - Cotton Candy
+  - "#FFBCD9"
+  - - 255
+    - 188
+    - 217
+  - 1998
+  - 
+  - 
+- - Dandelion
+  - "#FDDB6D"
+  - - 253
+    - 219
+    - 109
+  - 1990
+  - 
+  - 
+- - Denim
+  - "#2B6CC4"
+  - - 43
+    - 108
+    - 196
+  - 1993
+  - 
+  - 
+- - Desert Sand
+  - "#EFCDB8"
+  - - 239
+    - 205
+    - 184
+  - 1998
+  - 
+  - 
+- - Eggplant
+  - "#6E5160"
+  - - 110
+    - 81
+    - 96
+  - 1998
+  - 
+  - 
+- - Electric Lime
+  - "#CEFF1D"
+  - - 206
+    - 255
+    - 29
+  - 1990
+  - 
+  - Fluorescent.
+- - Fern
+  - "#71BC78"
+  - - 113
+    - 188
+    - 120
+  - 1998
+  - 
+  - 
+- - Forest Green
+  - "#6DAE81"
+  - - 109
+    - 174
+    - 129
+  - 1958
+  - 
+  - 
+- - Fuchsia
+  - "#C364C5"
+  - - 195
+    - 100
+    - 197
+  - 1990
+  - 
+  - 
+- - Fuzzy Wuzzy
+  - "#CC6666"
+  - - 204
+    - 102
+    - 102
+  - 1998
+  - 
+  - 
+- - Gold
+  - "#E7C697"
+  - - 231
+    - 198
+    - 151
+  - 1949
+  - 
+  - Metallic.
+- - Goldenrod
+  - "#FCD975"
+  - - 252
+    - 217
+    - 117
+  - 1958
+  - 
+  - 
+- - Granny Smith Apple
+  - "#A8E4A0"
+  - - 168
+    - 228
+    - 160
+  - 1993
+  - 
+  - 
+- - Gray
+  - "#95918C"
+  - - 149
+    - 145
+    - 140
+  - 1949
+  - 
+  - 
+- - Green
+  - "#1CAC78"
+  - - 28
+    - 172
+    - 120
+  - 1903
+  - 
+  - 
+- - Green Blue
+  - "#1164B4"
+  - - 17
+    - 100
+    - 180
+  - 1949
+  - 1990
+  - 
+- - Green Yellow
+  - "#F0E891"
+  - - 240
+    - 232
+    - 145
+  - 1949
+  - 
+  - 
+- - Hot Magenta
+  - "#FF1DCE"
+  - - 255
+    - 29
+    - 206
+  - 1972
+  - 
+  - Fluorescent.
+- - Inchworm
+  - "#B2EC5D"
+  - - 178
+    - 236
+    - 93
+  - 2003
+  - 
+  - 
+- - Indigo
+  - "#5D76CB"
+  - - 93
+    - 118
+    - 203
+  - 2000
+  - 
+  - 
+- - Jazzberry Jam
+  - "#CA3767"
+  - - 202
+    - 55
+    - 103
+  - 2003
+  - 
+  - 
+- - Jungle Green
+  - "#3BB08F"
+  - - 59
+    - 176
+    - 143
+  - 1990
+  - 
+  - 
+- - Laser Lemon
+  - "#FEFE22"
+  - - 254
+    - 254
+    - 34
+  - 1972
+  - 
+  - 1990
+- - Lavender
+  - "#FCB4D5"
+  - - 252
+    - 180
+    - 213
+  - 1958
+  - 
+  - 
+- - Lemon Yellow
+  - "#FFF44F"
+  - - 255
+    - 244
+    - 79
+  - 1949
+  - 1990
+  - 
+- - Macaroni and Cheese
+  - "#FFBD88"
+  - - 255
+    - 189
+    - 136
+  - 1993
+  - 
+  - 
+- - Magenta
+  - "#F664AF"
+  - - 246
+    - 100
+    - 175
+  - 1949
+  - 
+  - 
+- - Magic Mint
+  - "#AAF0D1"
+  - - 170
+    - 240
+    - 209
+  - 1990
+  - 2003
+  - Fluorescent.
+- - Mahogany
+  - "#CD4A4C"
+  - - 205
+    - 74
+    - 76
+  - 1949
+  - 
+  - 
+- - Maize
+  - "#EDD19C"
+  - - 237
+    - 209
+    - 156
+  - 1949
+  - 1990
+  - 
+- - Manatee
+  - "#979AAA"
+  - - 151
+    - 154
+    - 170
+  - 1998
+  - 
+  - 
+- - Mango Tango
+  - "#FF8243"
+  - - 255
+    - 130
+    - 67
+  - 2003
+  - 
+  - 
+- - Maroon
+  - "#C8385A"
+  - - 200
+    - 56
+    - 90
+  - 1949
+  - 
+  - 
+- - Mauvelous
+  - "#EF98AA"
+  - - 239
+    - 152
+    - 170
+  - 1993
+  - 
+  - 
+- - Melon
+  - "#FDBCB4"
+  - - 253
+    - 188
+    - 180
+  - 1949
+  - 
+  - 
+- - Midnight Blue
+  - "#1A4876"
+  - - 26
+    - 72
+    - 118
+  - 1949
+  - 
+  - 1958
+- - Mountain Meadow
+  - "#30BA8F"
+  - - 48
+    - 186
+    - 143
+  - 1998
+  - 
+  - 
+- - Mulberry
+  - "#C54B8C"
+  - - 197
+    - 75
+    - 140
+  - 1958
+  - 2003
+  - 
+- - Navy Blue
+  - "#1974D2"
+  - - 25
+    - 116
+    - 210
+  - 1958
+  - 
+  - 
+- - Neon Carrot
+  - "#FFA343"
+  - - 255
+    - 163
+    - 67
+  - 1990
+  - 
+  - Fluorescent.
+- - Olive Green
+  - "#BAB86C"
+  - - 186
+    - 184
+    - 108
+  - 1949
+  - 
+  - 
+- - Orange
+  - "#FF7538"
+  - - 255
+    - 117
+    - 56
+  - 1903
+  - 
+  - 
+- - Orange Red
+  - "#FF2B2B"
+  - - 255
+    - 43
+    - 43
+  - 1949
+  - 1990
+  - 
+- - Orange Yellow
+  - "#F8D568"
+  - - 248
+    - 213
+    - 104
+  - 1949
+  - 1990
+  - 
+- - Orchid
+  - "#E6A8D7"
+  - - 230
+    - 168
+    - 215
+  - 1949
+  - 
+  - 
+- - Outer Space
+  - "#414A4C"
+  - - 65
+    - 74
+    - 76
+  - 1998
+  - 
+  - 
+- - Outrageous Orange
+  - "#FF6E4A"
+  - - 255
+    - 110
+    - 74
+  - 1972
+  - 
+  - 1990
+- - Pacific Blue
+  - "#1CA9C9"
+  - - 28
+    - 169
+    - 201
+  - 1993
+  - 
+  - 
+- - Peach
+  - "#FFCFAB"
+  - - 255
+    - 207
+    - 171
+  - 1949
+  - 
+  - 1962
+- - Periwinkle
+  - "#C5D0E6"
+  - - 197
+    - 208
+    - 230
+  - 1949
+  - 
+  - 
+- - Piggy Pink
+  - "#FDDDE6"
+  - - 253
+    - 221
+    - 230
+  - 1998
+  - 
+  - 
+- - Pine Green
+  - "#158078"
+  - - 21
+    - 128
+    - 120
+  - 1949
+  - 
+  - 
+- - Pink Flamingo
+  - "#FC74FD"
+  - - 252
+    - 116
+    - 253
+  - 1998
+  - 
+  - 
+- - Pink Sherbert
+  - "#F78FA7"
+  - - 247
+    - 143
+    - 167
+  - 1998
+  - 
+  - 2000
+- - Plum
+  - "#8E4585"
+  - - 142
+    - 69
+    - 133
+  - 1958
+  - 
+  - 
+- - Purple Heart
+  - "#7442C8"
+  - - 116
+    - 66
+    - 200
+  - 1998
+  - 
+  - 
+- - Purple Mountain's Majesty
+  - "#9D81BA"
+  - - 157
+    - 129
+    - 186
+  - 1993
+  - 
+  - 
+- - Purple Pizzazz
+  - "#FE4EDA"
+  - - 254
+    - 78
+    - 218
+  - 1990
+  - 
+  - Fluorescent.
+- - Radical Red
+  - "#FF496C"
+  - - 255
+    - 73
+    - 108
+  - 1990
+  - 
+  - Fluorescent.
+- - Raw Sienna
+  - "#D68A59"
+  - - 214
+    - 138
+    - 89
+  - 1958
+  - 
+  - 
+- - Raw Umber
+  - "#714B23"
+  - - 113
+    - 75
+    - 35
+  - 1958
+  - 1990
+  - 
+- - Razzle Dazzle Rose
+  - "#FF48D0"
+  - - 255
+    - 72
+    - 208
+  - 1990
+  - 
+  - Fluorescent.
+- - Razzmatazz
+  - "#E3256B"
+  - - 227
+    - 37
+    - 107
+  - 1993
+  - 
+  - 
+- - Red
+  - "#EE204D"
+  - - 238
+    - 32
+    - 77
+  - 1903
+  - 
+  - 
+- - Red Orange
+  - "#FF5349"
+  - - 255
+    - 83
+    - 73
+  - 1949
+  - 
+  - 
+- - Red Violet
+  - "#C0448F"
+  - - 192
+    - 68
+    - 143
+  - 1949
+  - 
+  - 
+- - Robin's Egg Blue
+  - "#1FCECB"
+  - - 31
+    - 206
+    - 203
+  - 1993
+  - 
+  - 
+- - Royal Purple
+  - "#7851A9"
+  - - 120
+    - 81
+    - 169
+  - 1990
+  - 
+  - 
+- - Salmon
+  - "#FF9BAA"
+  - - 255
+    - 155
+    - 170
+  - 1949
+  - 
+  - 
+- - Scarlet
+  - "#FC2847"
+  - - 252
+    - 40
+    - 71
+  - 1998
+  - 
+  - 2000
+- - Screamin' Green
+  - "#76FF7A"
+  - - 118
+    - 255
+    - 122
+  - 1972
+  - 
+  - 1990
+- - Sea Green
+  - "#9FE2BF"
+  - - 159
+    - 226
+    - 191
+  - 1949
+  - 
+  - 
+- - Sepia
+  - "#A5694F"
+  - - 165
+    - 105
+    - 79
+  - 1958
+  - 
+  - 
+- - Shadow
+  - "#8A795D"
+  - - 138
+    - 121
+    - 93
+  - 1998
+  - 
+  - 
+- - Shamrock
+  - "#45CEA2"
+  - - 69
+    - 206
+    - 162
+  - 1993
+  - 
+  - 
+- - Shocking Pink
+  - "#FB7EFD"
+  - - 251
+    - 126
+    - 253
+  - 1972
+  - 
+  - 1990
+- - Silver
+  - "#CDC5C2"
+  - - 205
+    - 197
+    - 194
+  - 1949
+  - 
+  - Metallic.
+- - Sky Blue
+  - "#80DAEB"
+  - - 128
+    - 218
+    - 235
+  - 1958
+  - 
+  - 
+- - Spring Green
+  - "#ECEABE"
+  - - 236
+    - 234
+    - 190
+  - 1949
+  - 
+  - 
+- - Sunglow
+  - "#FFCF48"
+  - - 255
+    - 207
+    - 72
+  - 1990
+  - 
+  - Fluorescent.
+- - Sunset Orange
+  - "#FD5E53"
+  - - 253
+    - 94
+    - 83
+  - 1998
+  - 
+  - 
+- - Tan
+  - "#FAA76C"
+  - - 250
+    - 167
+    - 108
+  - 1949
+  - 
+  - 
+- - Teal Blue
+  - "#18A7B5"
+  - - 24
+    - 167
+    - 181
+  - 1990
+  - 2003
+  - 
+- - Thistle
+  - "#EBC7DF"
+  - - 235
+    - 199
+    - 223
+  - 1949
+  - 2000
+  - 
+- - Tickle Me Pink
+  - "#FC89AC"
+  - - 252
+    - 137
+    - 172
+  - 1993
+  - 
+  - Named in a contest by ClevverTV Personality Joslyn Davis
+- - Timberwolf
+  - "#DBD7D2"
+  - - 219
+    - 215
+    - 210
+  - 1993
+  - 
+  - 
+- - Tropical Rain Forest
+  - "#17806D"
+  - - 23
+    - 128
+    - 109
+  - 1993
+  - 
+  - 
+- - Tumbleweed
+  - "#DEAA88"
+  - - 222
+    - 170
+    - 136
+  - 1993
+  - 
+  - 
+- - Turquoise Blue
+  - "#77DDE7"
+  - - 119
+    - 221
+    - 231
+  - 1949
+  - 
+  - 
+- - Unmellow Yellow
+  - "#FFFF66"
+  - - 255
+    - 255
+    - 102
+  - 1990
+  - 
+  - Fluorescent.
+- - Violet (Purple)
+  - "#926EAE"
+  - - 146
+    - 110
+    - 174
+  - 1903
+  - 
+  - 
+- - Violet Blue
+  - "#324AB2"
+  - - 50
+    - 74
+    - 178
+  - 1949
+  - 1990
+  - 
+- - Violet Red
+  - "#F75394"
+  - - 247
+    - 83
+    - 148
+  - 1949
+  - 
+  - 
+- - Vivid Tangerine
+  - "#FFA089"
+  - - 255
+    - 160
+    - 137
+  - 1990
+  - 
+  - 
+- - Vivid Violet
+  - "#8F509D"
+  - - 143
+    - 80
+    - 157
+  - 1998
+  - 
+  - 
+- - White
+  - "#FFFFFF"
+  - - 255
+    - 255
+    - 255
+  - 1949
+  - 
+  - 
+- - Wild Blue Yonder
+  - "#A2ADD0"
+  - - 162
+    - 173
+    - 208
+  - 2003
+  - 
+  - 
+- - Wild Strawberry
+  - "#FF43A4"
+  - - 255
+    - 67
+    - 164
+  - 1990
+  - 
+  - 
+- - Wild Watermelon
+  - "#FC6C85"
+  - - 252
+    - 108
+    - 133
+  - 1972
+  - 
+  - 1990
+- - Wisteria
+  - "#CDA4DE"
+  - - 205
+    - 164
+    - 222
+  - 1993
+  - 
+  - 
+- - Yellow
+  - "#FCE883"
+  - - 252
+    - 232
+    - 131
+  - 1903
+  - 
+  - 
+- - Yellow Green
+  - "#C5E384"
+  - - 197
+    - 227
+    - 132
+  - 1949
+  - 
+  - 
+- - Yellow Orange
+  - "#FFB653"
+  - - 255
+    - 174
+    - 66
+  - 1949
+  - 
+  - 
+Silver Swirls: 
+- - Aztec Gold
+  - "#C39953"
+- - Burnished Brown
+  - "#A17A74"
+- - Cerulean Frost
+  - "#6D9BC3"
+- - Cinnamon Satin
+  - "#CD607E"
+- - Copper Penny
+  - "#AD6F69"
+- - Cosmic Cobalt
+  - "#2E2D88"
+- - Glossy Grape
+  - "#AB92B3"
+- - Granite Gray
+  - "#676767"
+- - Green Sheen
+  - "#6EAEA1"
+- - Lilac Luster
+  - "#AE98AA"
+- - Misty Moss
+  - "#BBB477"
+- - Mystic Maroon
+  - "#AD4379"
+- - Pearly Purple
+  - "#B768A2"
+- - Pewter Blue
+  - "#8BA8B7"
+- - Polished Pine
+  - "#5DA493"
+- - Quick Silver
+  - "#A6A6A6"
+- - Rose Dust
+  - "#9E5E6F"
+- - Rusty Red
+  - "#DA2C43"
+- - Shadow Blue
+  - "#778BA5"
+- - Shiny Shamrock
+  - "#5FA778"
+- - Steel Teal
+  - "#5F8A8B"
+- - Sugar Plum
+  - "#914E75"
+- - Twilight Lavender
+  - "#8A496B"
+- - Wintergreen Dream
+  - "#56887D"
+Magic Scent: 
+- - Baby Powder
+  - "#FEFEFA"
+- - Banana
+  - "#FFD12A"
+- - Blueberry
+  - "#4F86F7"
+- - Bubble Gum
+  - "#FFD3F8"
+- - Cedar Chest
+  - "#C95A49"
+- - Cherry
+  - "#DA2647"
+- - Chocolate
+  - "#BD8260"
+- - Coconut
+  - "#FEFEFE"
+- - Daffodil
+  - "#FFFF31"
+- - Dirt
+  - "#9B7653"
+- - Eucalyptus
+  - "#44D7A8"
+- - Fresh Air
+  - "#A6E7FF"
+- - Grape
+  - "#6F2DA8"
+- - Jelly Bean
+  - "#DA614E"
+- - Leather Jacket
+  - "#253529"
+- - Lemon
+  - "#FFFF38"
+- - Licorice
+  - "#1A1110"
+- - Lilac
+  - "#DB91EF"
+- - Lime
+  - "#B2F302"
+- - Lumber
+  - "#FFE4CD"
+- - New Car
+  - "#214FC6"
+- - Orange
+  - "#FF8866"
+- - Peach
+  - "#FFD0B9"
+- - Pine
+  - "#45A27D"
+- - Rose
+  - "#FF5050"
+- - Shampoo
+  - "#FFCFF1"
+- - Smoke
+  - "#738276"
+- - Soap
+  - "#CEC8EF"
+- - Strawberry
+  - "#FC5A8D"
+- - Tulip
+  - "#FF878D"
+Gem Tones: 
+- - Amethyst
+  - "#892EB0"
+- - Citrine
+  - "#A54E37"
+- - Emerald
+  - "#389765"
+- - Jade
+  - "#42BD9D"
+- - Jasper
+  - "#D73B3E"
+- - Lapis Lazuli
+  - "#2E008C"
+- - Malachite
+  - "#17857B"
+- - Moonstone
+  - "#73A9C2"
+- - Onyx
+  - "#0F0F0F"
+- - Peridot
+  - "#E6E200"
+- - Pink Pearl
+  - "#E7ACCF"
+- - Rose Quartz
+  - "#CF2583"
+- - Ruby
+  - "#DC0646"
+- - Sapphire
+  - "#557DDB"
+- - Smokey Topaz
+  - "#933D41"
+- - Tiger's Eye
+  - "#E08D3C"
+Pearl Brite: 
+- - Aqua Pearl
+  - "#5FBED7"
+- - Black Coral Pearl
+  - "#54626F"
+- - Caribbean Green Pearl
+  - "#6ADA8E"
+- - Cultured Pearl
+  - "#F5F5F5"
+- - Key Lime Pearl
+  - "#E8F48C"
+- - Mandarin Pearl
+  - "#F37A48"
+- - Midnight Pearl
+  - "#702670"
+- - Mystic Pearl
+  - "#D65282"
+- - Ocean Blue Pearl
+  - "#4F42B5"
+- - Ocean Green Pearl
+  - "#48BF91"
+- - Orchid Pearl
+  - "#7B4259"
+- - Rose Pearl
+  - "#F03865"
+- - Salmon Pearl
+  - "#F1444A"
+- - Sunny Pearl
+  - "#F2F27A"
+- - Sunset Pearl
+  - "#F1CC79"
+- - Turquoise Pearl
+  - "#3BBCD0"
+Metallic FX: 
+- - Alloy Orange
+  - "#C46210"
+  - - 196
+    - 98
+    - 16
+  - 2001
+  - 
+  - Metallic.
+- - B'dazzled Blue
+  - "#2E5894"
+  - - 46
+    - 88
+    - 148
+  - 2001
+  - 
+  - Metallic.
+- - Big Dip O' Ruby
+  - "#9C2542"
+  - - 156
+    - 37
+    - 66
+  - 2001
+  - 
+  - Metallic.
+- - Bittersweet Shimmer
+  - "#BF4F51"
+  - - 191
+    - 79
+    - 81
+  - 2001
+  - 
+  - Metallic.
+- - Blast Off Bronze
+  - "#A57164"
+  - - 165
+    - 113
+    - 100
+  - 2001
+  - 
+  - Metallic.
+- - Cyber Grape
+  - "#58427C"
+  - - 88
+    - 66
+    - 124
+  - 2001
+  - 
+  - Metallic.
+- - Deep Space Sparkle
+  - "#4A646C"
+  - - 74
+    - 100
+    - 108
+  - 2001
+  - 
+  - Metallic.
+- - Gold Fusion
+  - "#85754E"
+  - - 133
+    - 117
+    - 78
+  - 2001
+  - 
+  - Metallic.
+- - Illuminating Emerald
+  - "#319177"
+  - - 49
+    - 145
+    - 119
+  - 2001
+  - 
+  - Metallic.
+- - Metallic Seaweed
+  - "#0A7E8C"
+  - - 10
+    - 126
+    - 140
+  - 2001
+  - 
+  - Metallic.
+- - Metallic Sunburst
+  - "#9C7C38"
+  - - 156
+    - 124
+    - 56
+  - 2001
+  - 
+  - Metallic.
+- - Razzmic Berry
+  - "#8D4E85"
+  - - 141
+    - 78
+    - 133
+  - 2001
+  - 
+  - Metallic.
+- - Sheen Green
+  - "#8FD400"
+  - - 143
+    - 212
+    - 0
+  - 2001
+  - 
+  - Metallic.
+- - Shimmering Blush
+  - "#D98695"
+  - - 217
+    - 134
+    - 149
+  - 2001
+  - 
+  - Metallic.
+- - Sonic Silver
+  - "#757575"
+  - - 117
+    - 117
+    - 117
+  - 2001
+  - 
+  - Metallic.
+- - Steel Blue
+  - "#0081AB"
+  - - 0
+    - 129
+    - 171
+  - 2001
+  - 
+  - Metallic.
+Silly Scents: 
+- - Alien Armpit
+  - "#84DE02"
+- - Big Foot Feet
+  - "#E88E5A"
+- - Booger Buster
+  - "#DDE26A"
+- - Dingy Dungeon
+  - "#C53151"
+- - Gargoyle Gas
+  - "#FFDF46"
+- - Giant's Club
+  - "#B05C52"
+- - Magic Potion
+  - "#FF4444"
+- - Mummy's Tomb
+  - "#828E84"
+- - Ogre Odor
+  - "#FD5240"
+- - Pixie Powder
+  - "#391285"
+- - Princess Perfume
+  - "#FF85CF"
+- - Sasquatch Socks
+  - "#FF4681"
+- - Sea Serpent
+  - "#4BC7CF"
+- - Smashed Pumpkin
+  - "#FF6D3A"
+- - Sunburnt Cyclops
+  - "#FF404C"
+- - Winter Wizard
+  - "#A0E6FF"
+Heads 'n Tails: 
+- - Sizzling Red
+  - "#FF3855"
+- - Red Salsa
+  - "#FD3A4A"
+- - Tart Orange
+  - "#FB4D46"
+- - Orange Soda
+  - "#FA5B3D"
+- - Bright Yellow
+  - "#FFAA1D"
+- - Yellow Sunshine
+  - "#FFF700"
+- - Slimy Green
+  - "#299617"
+- - Green Lizard
+  - "#A7F432"
+- - Denim Blue
+  - "#2243B6"
+- - Blue Jeans
+  - "#5DADEC"
+- - Plump Purple
+  - "#5946B2"
+- - Purple Plum
+  - "#9C51B6"
+- - Sweet Brown
+  - "#A83731"
+- - Brown Sugar
+  - "#FCC7B9"
+- - Eerie Black
+  - "#1B1B1B"
+- - Black Shadows
+  - "#BFAFB2"
+Extreme Twistables Colors: 
+- - Fiery Rose
+  - "#FF5470"
+- - Sizzling Sunset
+  - "#FFDB00"
+- - Heat Wave
+  - "#FF7A00"
+- - Lemon Glacier
+  - "#FDFF00"
+- - Spring Frost
+  - "#87FF2A"
+- - Absolute Zero
+  - "#0048BA"
+- - Winter Sky
+  - "#FF007C"
+- - Frostbite
+  - "#E936A7"

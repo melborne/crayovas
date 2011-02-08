@@ -1,0 +1,22 @@
+#header
+  #app_title= APP_TITLE
+  #penbox
+    -[2,5,10,20,30,50].each do |weight|
+      .pen{:id => "#{weight}"}=weight
+  #infobox
+    #eraser ERASER
+    -3.times do |i|
+      .recent{:id => "recent#{i}"}
+#main
+  %canvas#canvas{:width => '1000px', :height => '500px'}= "Only work on browsers which handle HTML5."
+  #seriesbox
+    -@series_names.each do |sname|
+      .series_name{:id => "##{sname.gsub(/[\s']/,'')}"}=sname
+  #palette
+    -@colors_in_series.each do |se, colors|
+      .series{:id => se.gsub(/[\s']/,'')}
+        -colors.each do |c|
+          .color{:id=>"#{c.hex}",:style=>"background-color:#{c.hex};color:#{c.notes}"}=c.name
+
+#footer
+  %a{:href => "http://d.hatena.ne.jp/keyesberry"}hp12c
