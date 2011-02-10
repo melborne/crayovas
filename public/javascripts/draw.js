@@ -30,7 +30,9 @@ $(document).ready(function(){
 function default_set () {
   var def_color = "#111111";
   pen_color = def_color;
-  prev_pens[0] = def_color, prev_pens[1] = def_color;
+  $(".recent").each(function(){
+    prev_pens.push(def_color);
+  });
   pen_weight = 5;
   canvas_color = "#FFFFEE";
   $("#eraser, #reset").css('background-color', canvas_color);
@@ -66,8 +68,7 @@ function set_pen_color () {
   if (c=='eraser') {
     pen_color = canvas_color;
   } else {
-    prev_pens[1] = prev_pens[0];
-    prev_pens[0] = pen_color;
+    prev_pens.unshift(pen_color);
     pen_color = c;
     $("#recent2").css('background-color', prev_pens[1]);
     $("#recent1").css('background-color', prev_pens[0]);
