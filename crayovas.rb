@@ -5,6 +5,7 @@ require_relative 'lib/crayola'
 
 configure do
   APP_TITLE = "Crayovas"
+  CREDIT = ['hp12c', "http://d.hatena.ne.jp/keyesberry/20110209/p1"]
 end
 
 get '/' do
