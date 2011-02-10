@@ -20,10 +20,10 @@ $(document).ready(function(){
   canvas.mousemove(draw);
 
   $(".color").click(set_pen_color);
-  $("#eraser").click(set_pen_color);
+  $("#eraser").click(set_erase);
   $(".pen").click(set_pen_weight);
   $(".series_name").click(set_palette);
-  $("#reset").click(clear);
+  $("#reset").click(clear_canvas);
   $(".recent").click(set_recent_color);
   
   $(".color").mouseover(show_color_info);
@@ -69,14 +69,18 @@ function draw (e) {
 
 function set_pen_color () {
   var c = $(this).attr("id");
-  if (c=='eraser') {
-    pen_colors[0] = canvas_color;
-  } else {
-    pen_colors.unshift(c);
-    $(".recent").each(function(i){
-      $(this).css('background-color', pen_colors[i]);
-    })
-  };
+  pen_colors.unshift(c);
+  $(".recent").each(function(i){
+    $(this).css('background-color', pen_colors[i]);
+  })
+}
+
+function set_recent_color () {
+   pen_colors[0] = $(this).css("background-color");
+}
+
+function set_erase () {
+  pen_colors[0] = canvas_color;
 }
 
 function set_pen_weight () {
@@ -93,11 +97,7 @@ function set_palette () {
   $(this).css('background-color', selected_color);
 }
 
-function set_recent_color () {
-   pen_colors[0] = $(this).css("background-color");
-}
-
-function clear () {
+function clear_canvas () {
   var c = $("#canvas");
   var t = c[0].getContext("2d");
   t.fillStyle = canvas_color;
