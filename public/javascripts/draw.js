@@ -25,6 +25,10 @@ $(document).ready(function(){
   $(".series_name").click(set_palette);
   $("#reset").click(clear);
   $(".recent").click(set_recent_color);
+  
+  $(".color").mouseover(show_color_info);
+  $(".color").mouseout(hide_color_info);
+
 })
 
 function default_set () {
@@ -98,4 +102,14 @@ function clear () {
   var t = c[0].getContext("2d");
   t.fillStyle = canvas_color;
   t.fillRect(0,0,c.attr('width'),c.attr('height'));
+}
+
+function show_color_info () {
+  window.status = $(this).css("background-color");
+  return true;
+}
+
+function hide_color_info () {
+  window.status = "";
+  return true;
 }
