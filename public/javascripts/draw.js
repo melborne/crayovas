@@ -66,7 +66,7 @@ function draw (e) {
 function set_pen_color () {
   var c = $(this).attr("id");
   if (c=='eraser') {
-    pen_color[0] = canvas_color;
+    pen_colors[0] = canvas_color;
   } else {
     pen_colors.unshift(c);
     $(".recent").each(function(i){
