@@ -1,9 +1,9 @@
 var drawable = false;
 var px = 0, py = 0;
-var pen_color
+var pen_colors = [];
 var pen_weight;
-var prev_pens = [];
 var canvas_color;
+var selected_color, unselected_color;
 
 $(document).ready(function(){
   default_set();
@@ -28,20 +28,20 @@ $(document).ready(function(){
 })
 
 function default_set () {
-  var def_color = "#111111";
-  pen_color = def_color;
-  $(".recent").each(function(){
-    prev_pens.push(def_color);
-  });
+  pen_colors[0] = "#111111";
   pen_weight = 5;
   canvas_color = "#FFFFEE";
-  $("#eraser, #reset").css('background-color', canvas_color);
-  $(".recent").css('background-color', "#111111");
-  $(".pen").css("background-color", "#888888");
-  $("#5").css('background-color', "#444444");
+  selected_color = "#777777";
+  unselected_color = "#444444";
+  
+  $("#eraser").css('background-color', canvas_color);
+  $(".recent").css('background-color', unselected_color);
+  $("#recent0").css('background-color', pen_colors[0]);
+  $(".pen").css("background-color", unselected_color);
+  $("#5").css('background-color', selected_color);
   $(".series").hide();
   $(".series:first").show();
-  $(".series_name:first").css('background-color', '#444444');
+  $(".series_name:first").css('background-color', selected_color);
 }
 
 function draw (e) {
@@ -50,7 +50,7 @@ function draw (e) {
   var y = e.pageY - $(this).offset().top;
   var t = $(this)[0].getContext("2d");
 
-  t.strokeStyle = pen_color;
+  t.strokeStyle = pen_colors[0];
   t.lineWidth = pen_weight;
   t.lineJoin = "round";
   t.lineCap = "round";
@@ -66,20 +66,19 @@ function draw (e) {
 function set_pen_color () {
   var c = $(this).attr("id");
   if (c=='eraser') {
-    pen_color = canvas_color;
+    pen_color[0] = canvas_color;
   } else {
-    prev_pens.unshift(pen_color);
-    pen_color = c;
-    $("#recent2").css('background-color', prev_pens[1]);
-    $("#recent1").css('background-color', prev_pens[0]);
-    $("#recent0").css('background-color', c);
+    pen_colors.unshift(c);
+    $(".recent").each(function(i){
+      $(this).css('background-color', pen_colors[i]);
+    })
   };
 }
 
 function set_pen_weight () {
   pen_weight = $(this).attr("id");
-  $(".pen").css("background-color", "#888888");
-  $(this).css("background-color", "#444444");
+  $(".pen").css("background-color", unselected_color);
+  $(this).css("background-color", selected_color);
 }
 
 function set_palette () {
@@ -87,11 +86,11 @@ function set_palette () {
   $(".series").hide();
   $(sname).show();
   $(".series_name").css('background-color', 'transparent');
-  $(this).css('background-color', '#444444');
+  $(this).css('background-color', selected_color);
 }
 
 function set_recent_color () {
-   pen_color = $(this).css("background-color");
+   pen_colors[0] = $(this).css("background-color");
 }
 
 function clear () {
