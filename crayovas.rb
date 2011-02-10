@@ -8,20 +8,20 @@ configure do
 end
 
 get '/' do
-  cr = Crayola::Crayola
-  @series_names = cr.series
-  @colors_in_series = {}
-  @series_names.each do |se|
-    colors = cr.colors_in_series(se)
-               .map { |c| c.notes = c.hex =~ /#[0-7]/ ? "#D0FFD0" : "#424242"; c }
-    @colors_in_series[se] = colors
-  end
+  @colors = Crayola::Crayola.colors
+              .map { |c| c.notes = c.hex =~ /#[0-7]/ ? "#D0FFD0" : "#424242"; c }
+              .group_by { |color| color.series }
+
+  @colors = split_standard(@colors)
 
   haml :index
 end
 
-before do
-  
+helpers do
+  def split_standard(h)
+    std2 = h['Standard Colors'].pop(61)
+    h.to_a.insert(1, ['Standard Colors2', std2])
+  end
 end
 
 get '/style.css' do

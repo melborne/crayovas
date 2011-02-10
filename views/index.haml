@@ -11,11 +11,11 @@
 #main
   %canvas#canvas{:width => '1000px', :height => '500px'}= "Only work on browsers which handle HTML5."
   #seriesbox
-    -@series_names.each do |sname|
-      .series_name{:id => "##{sname.gsub(/[\s']/,'')}"}=sname
+    -@colors.map(&:first).each do |series|
+      .series_name{:id => "##{series.gsub(/[\s']/,'')}"}=series.gsub(/\s|Colors/,'')
   #palette
-    -@colors_in_series.each do |se, colors|
-      .series{:id => se.gsub(/[\s']/,'')}
+    -@colors.each do |series, colors|
+      .series{:id => series.gsub(/[\s']/,'')}
         -colors.each do |c|
           .color{:id=>"#{c.hex}",:style=>"background-color:#{c.hex};color:#{c.notes}"}=c.name
 
