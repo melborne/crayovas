@@ -19,16 +19,17 @@ $(document).ready(function(){
   );
   canvas.mousemove(draw);
 
-  $(".color").click(set_pen_color);
-  $("#eraser").click(set_erase);
-  $(".pen").click(set_pen_weight);
-  $(".series_name").click(set_palette);
-  $("#reset").click(clear_canvas);
-  $(".recent").click(set_recent_color);
+  $(".color").click( set_pen_color );
+  $("#eraser").click( set_erase );
+  $(".pen").click( set_pen_weight );
+  $(".series_name").click( set_palette );
+  $("#reset").click( clear_canvas );
+  $(".recent").click( set_recent_color );
   
-  $(".color").mouseover(show_color_info);
-  $(".color").mouseout(hide_color_info);
+  $(".color").mouseover( show_color_info );
+  $(".color").mouseout( hide_color_info );
 
+  $("#img_form").submit( check_imgurl_and_embed_image );
 })
 
 function default_set () {
@@ -111,5 +112,29 @@ function show_color_info () {
 
 function hide_color_info () {
   window.status = "";
+  return true;
+}
+
+function check_imgurl_and_embed_image () {
+  var url = $("#img_text").val();
+  $("#img_text").val("");
+  $.getJSON('/image/img='+escape(url), function(json){
+    embed_image(json.url);
+  })
+  return false;
+}
+
+//TODO:timeout
+function embed_image (url) {
+  var c = $("#canvas");
+  var t = c[0].getContext("2d");
+  var img = new Image();
+  img.onload = function(){
+    t.drawImage(img, 0, 0, c.attr('width'), c.attr('height'));
+  }
+  img.onerror = function(){
+    alert('Fail to load a image from '+ url);
+  }
+  img.src = url;
   return true;
 }

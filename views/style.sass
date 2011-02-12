@@ -16,28 +16,38 @@ body
   :margin-right auto
   :overflow auto
   #app_title
+    :position absolute
+    :top 10px
     :width 100px
-    :float left
     :font-size 24px
-    :margin 20px 0 10px 10px
-
-  #infobox, #penbox
-    :float right
-    :margin 20px 0 10px 0
-
-  .info
-    :height 30px
-    :width 80px
-    :text-align center
-    :float right
-    :color $bg_color
-    :background-color $font_color
-
-  .pen
-    :height 30px
-    :width 50px
-    :text-align center
+    :margin 15px 0 0 10px
     :float left
+  .img
+    :float right
+    :margin 15px 10px 10px 0
+  #img_url
+    :width 500px
+    :height 20px
+    :text-align right
+    :overflow hidden
+
+#infobox, #penbox
+  :float right
+  :margin 0 0 10px 0
+
+.info
+  :height 30px
+  :width 70px
+  :text-align center
+  :float right
+  :color $bg_color
+  :background-color $font_color
+
+.pen
+  :height 30px
+  :width 50px
+  :text-align center
+  :float left
 
 #main, #footer
   :width 1000px

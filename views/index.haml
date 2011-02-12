@@ -1,5 +1,10 @@
 #header
   #app_title= APP_TITLE
+  %form.img#img_form
+    %span Image URL:
+    %input#img_text{:type=>'text', :name=>'img'}
+    %input#img_post{:type=>'submit', :value=>'load'}
+#main
   #penbox
     -[2,5,10,20,30,50].each do |weight|
       .pen{:id => "#{weight}"}=weight
@@ -8,7 +13,6 @@
     .info#reset RESET
     -5.times do |i|
       .recent{:class => "info", :id => "recent#{i}"}
-#main
   %canvas#canvas{:width => '1000px', :height => '500px'}= "Only work on browsers which handle HTML5."
   #seriesbox
     -@colors.map(&:first).each do |series|
