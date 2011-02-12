@@ -29,7 +29,7 @@ $(document).ready(function(){
   $(".color").mouseover( show_color_info );
   $(".color").mouseout( hide_color_info );
 
-  $("#img_form").submit( check_imgurl_and_embed_image );
+  $("#img_form").submit( load_image );
 })
 
 function default_set () {
@@ -115,17 +115,9 @@ function hide_color_info () {
   return true;
 }
 
-function check_imgurl_and_embed_image () {
+function load_image () {
   var url = $("#img_text").val();
   $("#img_text").val("");
-  $.getJSON('/image/img='+escape(url), function(json){
-    embed_image(json.url);
-  })
-  return false;
-}
-
-//TODO:timeout
-function embed_image (url) {
   var c = $("#canvas");
   var t = c[0].getContext("2d");
   var img = new Image();
@@ -136,5 +128,5 @@ function embed_image (url) {
     alert('Fail to load a image from '+ url);
   }
   img.src = url;
-  return true;
+  return false;
 }

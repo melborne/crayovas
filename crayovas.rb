@@ -18,20 +18,10 @@ get '/' do
   haml :index
 end
 
-get %r{/image/img=(https?://.*)} do |url|
-  redirect '/' unless request.xhr?
-  content_type :json
-  {"url" => h(url)}.to_json
-end
-
 helpers do
   def split_standard(h)
     std2 = h['Standard Colors'].pop(61)
     h.to_a.insert(1, ['Standard Colors2', std2])
-  end
-
-  def h(user_input)
-    URI.regexp(['http', 'https', 'ftp']) =~ user_input && URI.unescape(user_input)
   end
 end
 
