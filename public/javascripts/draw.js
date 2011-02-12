@@ -4,11 +4,14 @@ var pen_colors = [];
 var pen_weight;
 var canvas_color;
 var selected_color, unselected_color;
+var canvas, ctx;
 
 $(document).ready(function(){
+  canvas = $("#canvas");
+  ctx = canvas[0].getContext('2d');
+  
   default_set();
 
-  var canvas = $("#canvas");
   canvas.toggle(
     function(e){
       drawable = true;
@@ -53,17 +56,16 @@ function draw (e) {
   if (!drawable) { return };
   var x = e.pageX - $(this).offset().left;
   var y = e.pageY - $(this).offset().top;
-  var t = $(this)[0].getContext("2d");
 
-  t.strokeStyle = pen_colors[0];
-  t.lineWidth = pen_weight;
-  t.lineJoin = "round";
-  t.lineCap = "round";
-  t.beginPath();
-  t.moveTo(px,py);
-  t.lineTo(x,y);
-  t.stroke();
-  t.closePath();
+  ctx.strokeStyle = pen_colors[0];
+  ctx.lineWidth = pen_weight;
+  ctx.lineJoin = "round";
+  ctx.lineCap = "round";
+  ctx.beginPath();
+  ctx.moveTo(px,py);
+  ctx.lineTo(x,y);
+  ctx.stroke();
+  ctx.closePath();
   px = x;
   py = y;
 }
@@ -99,10 +101,8 @@ function set_palette () {
 }
 
 function clear_canvas () {
-  var c = $("#canvas");
-  var t = c[0].getContext("2d");
-  t.fillStyle = canvas_color;
-  t.fillRect(0,0,c.attr('width'),c.attr('height'));
+  ctx.fillStyle = canvas_color;
+  ctx.fillRect(0,0,canvas.attr('width'),canvas.attr('height'));
 }
 
 function show_color_info () {
@@ -118,11 +118,9 @@ function hide_color_info () {
 function load_image () {
   var url = $("#img_text").val();
   $("#img_text").val("");
-  var c = $("#canvas");
-  var t = c[0].getContext("2d");
   var img = new Image();
   img.onload = function(){
-    t.drawImage(img, 0, 0, c.attr('width'), c.attr('height'));
+    ctx.drawImage(img, 0, 0, canvas.attr('width'), canvas.attr('height'));
   }
   img.onerror = function(){
     alert('Fail to load a image from '+ url);
