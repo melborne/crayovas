@@ -22,7 +22,7 @@ header {
     top: 15px;
     width: 200px;
     margin-left: -10px;
-    .title_chr {
+    .titleChr {
       font-size: 28px;
       &:first-child {
         font-size: 36px;
@@ -44,10 +44,23 @@ header {
     margin-bottom: 8px;
     .nav {
       float: right;
-      height: 30px;
+      height: 28px;
       width: 70px;
       text-align: center;
+      &:first-child {
+        -webkit-border-right-top-radius: 4px;
+        -moz-border-radius-topright: 4px;
+        -webkit-border-right-bottom-radius: 4px;
+        -moz-border-radius-bottomright: 4px;
+      }
+      &:last-child {
+        -webkit-border-left-top-radius: 4px;
+        -moz-border-radius-topleft: 4px;
+        -webkit-border-left-bottom-radius: 4px;
+        -moz-border-radius-bottomleft: 4px;
+      }
     }
+
     .pen {
       width: 50px;
     }
@@ -67,6 +80,8 @@ header {
       font-size: 12pt;
       margin: 5px 5px 0 0;
       padding: 3px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
     }
   }
   #colorPalette {
