@@ -104,8 +104,7 @@ function setPalette () {
 }
 
 function clearCanvas () {
-  paint.ctx.fillStyle = paint.canvasColor;
-  paint.ctx.fillRect(0,0,paint.canvasWidth,paint.canvasHeight);
+  paint.ctx.clearRect(0,0,paint.canvasWidth,paint.canvasHeight);
 }
 
 function showColorInfo () {

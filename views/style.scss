@@ -1,6 +1,6 @@
 $font_color: #D0FFD0;
 $bg_color: #212121;
-$box_color: #FFFFEE;
+$canvas_color: #FFFFEE;
 
 * {
   margin: 0;
@@ -56,7 +56,7 @@ header {
     }
   }
   #canvas {
-    background-color: $box_color;
+    background-color: $canvas_color;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
   }
@@ -73,7 +73,7 @@ header {
     overflow: auto;
     margin-top: 8px;
     padding: 3px;
-    border: thin solid $box_color;
+    border: thin solid $canvas_color;
     .color {
       float: left;
       width: 120px;
