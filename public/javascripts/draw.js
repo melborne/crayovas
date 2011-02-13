@@ -1,116 +1,119 @@
-var drawable = false;
-var px = 0, py = 0;
-var pen_colors = [];
-var pen_weight;
-var canvas_color;
-var selected_color, unselected_color;
-var canvas, ctx;
+var paint = {
+  drawable : false,
+  penColors : ["#111111"],
+  penWeight : 5,
+  canvasColor : "#FFFFEE",
+  px : 0,
+  py : 0
+}
+var selectedColor, unselectedColor;
 
 $(document).ready(function(){
-  canvas = $("#canvas");
-  ctx = canvas[0].getContext('2d');
-  
-  default_set();
 
-  canvas.toggle(
+  initialize();
+
+  paint.canvas.toggle(
     function(e){
-      drawable = true;
-      px = e.pageX - $(this).offset().left;
-      py = e.pageY - $(this).offset().top;
+      paint.drawable = true;
+      paint.px = e.pageX - $(this).offset().left;
+      paint.py = e.pageY - $(this).offset().top;
     },
-    function(e){ drawable = false; }
+    function(e){ paint.drawable = false; }
   );
-  canvas.mousemove(draw);
+  paint.canvas.mousemove(draw);
 
-  $(".color").click( set_pen_color );
-  $("#eraser").click( set_erase );
-  $(".pen").click( set_pen_weight );
-  $(".series_name").click( set_palette );
-  $("#reset").click( clear_canvas );
-  $(".recent").click( set_recent_color );
+  $(".color").click( setPenColor );
+  $("#eraser").click( setErase );
+  $(".pen").click( setPenWeight );
+  $(".series_name").click( setPalette );
+  $("#reset").click( clearCanvas );
+  $(".recent").click( setRecentColor );
   
-  $(".color").mouseover( show_color_info );
-  $(".color").mouseout( hide_color_info );
+  $(".color").mouseover( showColorInfo );
+  $(".color").mouseout( hideColorInfo );
 
   $("#img_form").submit( load_image );
 })
 
-function default_set () {
-  pen_colors[0] = "#111111";
-  pen_weight = 5;
-  canvas_color = "#FFFFEE";
-  selected_color = "#777777";
-  unselected_color = "#444444";
+function initialize () {
+  paint.canvas = $("#canvas");
+  paint.ctx = paint.canvas[0].getContext('2d');
+  paint.canvasWidth = paint.canvas.attr("width");
+  paint.canvasHeight = paint.canvas.attr("height");
   
-  $("#eraser").css('background-color', canvas_color);
-  $(".recent").css('background-color', unselected_color);
-  $("#recent0").css('background-color', pen_colors[0]);
-  $(".pen").css("background-color", unselected_color);
-  $("#5").css('background-color', selected_color);
+  selectedColor = "#777777";
+  unselectedColor = "#444444";
+  
+  $("#eraser").css('background-color', paint.canvasColor);
+  $(".recent").css('background-color', unselectedColor);
+  $("#recent0").css('background-color', paint.penColors[0]);
+  $(".pen").css("background-color", unselectedColor);
+  $("#5").css('background-color', selectedColor);
   $(".series").hide();
   $(".series:first").show();
-  $(".series_name:first").css('background-color', selected_color);
+  $(".series_name:first").css('background-color', selectedColor);
 }
 
 function draw (e) {
-  if (!drawable) { return };
+  if (!paint.drawable) { return };
   var x = e.pageX - $(this).offset().left;
   var y = e.pageY - $(this).offset().top;
+  var ctx = paint.ctx;
 
-  ctx.strokeStyle = pen_colors[0];
-  ctx.lineWidth = pen_weight;
+  ctx.strokeStyle = paint.penColors[0];
+  ctx.lineWidth = paint.penWeight;
   ctx.lineJoin = "round";
   ctx.lineCap = "round";
   ctx.beginPath();
-  ctx.moveTo(px,py);
+  ctx.moveTo(paint.px,paint.py);
   ctx.lineTo(x,y);
   ctx.stroke();
   ctx.closePath();
-  px = x;
-  py = y;
+  paint.px = x;
+  paint.py = y;
 }
 
-function set_pen_color () {
+function setPenColor () {
   var c = $(this).attr("id");
-  pen_colors.unshift(c);
+  paint.penColors.unshift(c);
   $(".recent").each(function(i){
-    $(this).css('background-color', pen_colors[i]);
+    $(this).css('background-color', paint.penColors[i]);
   })
 }
 
-function set_recent_color () {
-   pen_colors[0] = $(this).css("background-color");
+function setRecentColor () {
+   paint.penColors[0] = $(this).css("background-color");
 }
 
-function set_erase () {
-  pen_colors[0] = canvas_color;
+function setErase () {
+  paint.penColors[0] = paint.canvasColor;
 }
 
-function set_pen_weight () {
-  pen_weight = $(this).attr("id");
-  $(".pen").css("background-color", unselected_color);
-  $(this).css("background-color", selected_color);
+function setPenWeight () {
+  paint.penWeight = $(this).attr("id");
+  $(".pen").css("background-color", unselectedColor);
+  $(this).css("background-color", selectedColor);
 }
 
-function set_palette () {
+function setPalette () {
   var sname = $(this).attr('id');
   $(".series").hide();
   $(sname).show();
   $(".series_name").css('background-color', 'transparent');
-  $(this).css('background-color', selected_color);
+  $(this).css('background-color', selectedColor);
 }
 
-function clear_canvas () {
-  ctx.fillStyle = canvas_color;
-  ctx.fillRect(0,0,canvas.attr('width'),canvas.attr('height'));
+function clearCanvas () {
+  paint.ctx.fillStyle = paint.canvasColor;
+  paint.ctx.fillRect(0,0,paint.canvasWidth,paint.canvasHeight);
 }
 
-function show_color_info () {
+function showColorInfo () {
   window.status = $(this).css("background-color");
   return true;
 }
 
-function hide_color_info () {
+function hideColorInfo () {
   window.status = "";
   return true;
 }
@@ -120,10 +123,10 @@ function load_image () {
   $("#img_text").val("");
   var img = new Image();
   img.onload = function(){
-    ctx.drawImage(img, 0, 0, canvas.attr('width'), canvas.attr('height'));
+    paint.ctx.drawImage(img, 0, 0, paint.canvasWidth, paint.canvasHeight);
   }
   img.onerror = function(){
-    alert('Fail to load a image from '+ url);
+    alert('Image not found: '+ url);
   }
   img.src = url;
   return false;
