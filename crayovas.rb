@@ -1,7 +1,6 @@
 require 'sinatra'
 require 'haml'
 require "sass"
-require "json"
 require_relative 'lib/crayola'
 
 configure do
@@ -32,6 +31,5 @@ helpers do
 end
 
 get '/style.css' do
-  content_type 'text/css', :charset => 'utf-8'
-  sass :style
+  scss :style
 end
