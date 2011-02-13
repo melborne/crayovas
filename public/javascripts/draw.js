@@ -25,14 +25,14 @@ $(document).ready(function(){
   $(".color").click( setPenColor );
   $("#eraser").click( setErase );
   $(".pen").click( setPenWeight );
-  $(".series_name").click( setPalette );
+  $(".seriesName").click( setPalette );
   $("#reset").click( clearCanvas );
   $(".recent").click( setRecentColor );
   
   $(".color").mouseover( showColorInfo );
   $(".color").mouseout( hideColorInfo );
 
-  $("#img_form").submit( load_image );
+  $("#imgurlForm").submit( loadImage );
 })
 
 function initialize () {
@@ -51,7 +51,7 @@ function initialize () {
   $("#5").css('background-color', selectedColor);
   $(".series").hide();
   $(".series:first").show();
-  $(".series_name:first").css('background-color', selectedColor);
+  $(".seriesName:first").css('background-color', selectedColor);
 }
 
 function draw (e) {
@@ -99,7 +99,7 @@ function setPalette () {
   var sname = $(this).attr('id');
   $(".series").hide();
   $(sname).show();
-  $(".series_name").css('background-color', 'transparent');
+  $(".seriesName").css('background-color', 'transparent');
   $(this).css('background-color', selectedColor);
 }
 
@@ -118,9 +118,9 @@ function hideColorInfo () {
   return true;
 }
 
-function load_image () {
-  var url = $("#img_text").val();
-  $("#img_text").val("");
+function loadImage () {
+  var url = $("#imgurl").val();
+  $("#imgurl").val("");
   var img = new Image();
   img.onload = function(){
     paint.ctx.drawImage(img, 0, 0, paint.canvasWidth, paint.canvasHeight);

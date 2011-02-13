@@ -1,30 +1,33 @@
-#header
+%header
   #title
     -@title_chars.each do |chr, hex|
       %span.title_chr{:style => "color:#{hex}"}=chr
-  %form.img#img_form
-    %span Image URL:
-    %input#img_text{:type=>'text', :name=>'img'}
-    %input#img_post{:type=>'submit', :value=>'load'}
 #main
-  #penbox
-    -[2,5,10,20,30,50].each do |weight|
-      .pen{:id => "#{weight}"}=weight
-  #infobox
-    .info#eraser Eraser
-    .info#reset Reset
+  %form#imgurlForm
+    %span Image URL:
+    %input#imgurl{:type=>'text', :name=>'imgurl'}
+    %input#load{:type=>'submit', :value=>'load'}
+
+  #topNavigator
+    -[2,5,10,20,30,50].reverse.each do |weight|
+      .pen{:class => 'nav', :id => "#{weight}"}=weight
+    .nav#eraser Eraser
+    .nav#reset Reset
     -5.times do |i|
-      .recent{:class => "info", :id => "recent#{i}"}
+      .recent{:class => "nav", :id => "recent#{i}"}
+
   %canvas#canvas{:width => '1000px', :height => '500px'}= "Only work on browsers which handle HTML5."
-  #seriesbox
+
+  #seriesSelector
     -@colors.map(&:first).each do |series|
-      .series_name{:id => "##{series.gsub(/[\s']/,'')}"}=series.gsub(/\s|Colors/,'')
-  #palette
+      .seriesName{:id => "##{series.gsub(/[\s']/,'')}"}=series.gsub(/\s|Colors/,'')
+
+  #colorPalette
     -@colors.each do |series, colors|
       .series{:id => series.gsub(/[\s']/,'')}
         -colors.each do |c|
           .color{:id=>"#{c.hex}",:style=>"background-color:#{c.hex};color:#{c.notes}"}=c.name
 
-#footer
+%footer
   %a{:href => CREDIT[1]}= CREDIT[0]
 
