@@ -32,6 +32,10 @@ $(document).ready(function(){
   $(".color").mouseover( showColorInfo );
   $(".color").mouseout( hideColorInfo );
 
+  $("#formToggle").click(function(){
+    f = $("#imgurlForm");
+    f.css('display')=='none' ? f.show('slow') : f.hide('slow');
+  });
   $("#imgurlForm").submit( loadImage );
 })
 
@@ -128,5 +132,6 @@ function loadImage () {
     alert('Image not found: '+ url);
   }
   img.src = url;
+  $("#imgurlForm").hide('slow');
   return false;
 }

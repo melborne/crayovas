@@ -1,6 +1,7 @@
 $font_color: #D0FFD0;
 $bg_color: #212121;
 $canvas_color: #FFFFEE;
+$selected_color: #777777;
 
 * {
   margin: 0;
@@ -32,11 +33,18 @@ header {
 }
 
 #main {
-  #imgurlForm {
+  #formBox {
     float: right;
-    margin: -10px 0 5px 0;
-    #imgurl {}
-    #load {}
+    height: 25px;
+    margin: -10px 5px 5px 0;
+    #formToggle {
+      float: right;
+      margin-right: 10px;
+    }
+    #imgurlForm {
+      display: none;
+      float: right;
+    }
   }
   #topNavigator {
     clear: right;
@@ -66,6 +74,9 @@ header {
     }
     #eraser {
       color: $bg_color;
+    }
+    #reset {
+      background-color: $selected_color;
     }
   }
   #canvas {

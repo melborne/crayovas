@@ -3,10 +3,11 @@
     -@title_chars.each do |chr, hex|
       %span.titleChr{:style => "color:#{hex}"}=chr
 #main
-  %form#imgurlForm
-    %span Image URL:
-    %input#imgurl{:type=>'text', :name=>'imgurl'}
-    %input#load{:type=>'submit', :value=>'load'}
+  #formBox
+    %form#imgurlForm
+      %input#imgurl{:type=>'text', :name=>'imgurl'}
+      %input#load{:type=>'submit', :value=>'load'}
+    #formToggle Image
 
   #topNavigator
     -[2,5,10,20,30,50].reverse.each do |weight|
