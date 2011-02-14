@@ -3,6 +3,11 @@ $bg_color: #212121;
 $canvas_color: #FFFFEE;
 $selected_color: #777777;
 
+@mixin rounded($topl:8px, $topr:8px, $bottomr:8px, $bottoml:8px) {
+  border-radius: $topl $topr $bottomr $bottoml;
+  -moz-border-radius: $topl $topr $bottomr $bottoml;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -55,18 +60,8 @@ header {
       height: 28px;
       width: 70px;
       text-align: center;
-      &:first-child {
-        -webkit-border-left-top-radius: 4px;
-        -moz-border-radius-topleft: 4px;
-        -webkit-border-left-bottom-radius: 4px;
-        -moz-border-radius-bottomleft: 4px;
-      }
-      &:last-child {
-        -webkit-border-right-top-radius: 4px;
-        -moz-border-radius-topright: 4px;
-        -webkit-border-right-bottom-radius: 4px;
-        -moz-border-radius-bottomright: 4px;
-      }
+      &:first-child { @include rounded(4px, 0, 0, 4px); };
+      &:last-child { @include rounded(0, 4px, 4px, 0); };
     }
 
     .pen {
@@ -81,8 +76,7 @@ header {
   }
   #canvas {
     background-color: $canvas_color;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
+    @include rounded();
   }
   #seriesSelector {
     overflow: auto;
