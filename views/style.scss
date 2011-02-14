@@ -48,24 +48,24 @@ header {
   }
   #topNavigator {
     clear: right;
-    overflow: auto;
+    float: right;
     margin-bottom: 8px;
     .nav {
-      float: right;
+      float: left;
       height: 28px;
       width: 70px;
       text-align: center;
       &:first-child {
-        -webkit-border-right-top-radius: 4px;
-        -moz-border-radius-topright: 4px;
-        -webkit-border-right-bottom-radius: 4px;
-        -moz-border-radius-bottomright: 4px;
-      }
-      &:last-child {
         -webkit-border-left-top-radius: 4px;
         -moz-border-radius-topleft: 4px;
         -webkit-border-left-bottom-radius: 4px;
         -moz-border-radius-bottomleft: 4px;
+      }
+      &:last-child {
+        -webkit-border-right-top-radius: 4px;
+        -moz-border-radius-topright: 4px;
+        -webkit-border-right-bottom-radius: 4px;
+        -moz-border-radius-bottomright: 4px;
       }
     }
 
