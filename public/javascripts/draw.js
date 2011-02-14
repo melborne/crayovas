@@ -108,7 +108,9 @@ function setPalette () {
 }
 
 function clearCanvas () {
-  paint.ctx.clearRect(0,0,paint.canvasWidth,paint.canvasHeight);
+  if (confirm('Are you sure?')) {
+    paint.ctx.clearRect(0,0,paint.canvasWidth,paint.canvasHeight);
+  };
 }
 
 function showColorInfo () {
