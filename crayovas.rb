@@ -1,7 +1,9 @@
+# encoding: UTF-8
 require 'sinatra'
 require 'haml'
 require "sass"
 require_relative 'lib/crayola'
+require_relative "lib/wairo"
 
 configure do
   APP_TITLE = "Crayovas"
@@ -10,7 +12,8 @@ end
 
 get '/' do
   @title_chars = colorize(APP_TITLE)
-  @colors = Crayola::Crayola.colors
+  wairo_colors = Wairo::Wairo.colors
+  @colors = (Crayola::Crayola.colors + wairo_colors)
               .map { |c| c.notes = c.hex =~ /#[0-7]/ ? "#D0FFD0" : "#424242"; c }
               .group_by { |color| color.series }
   @colors = split_standard(@colors)

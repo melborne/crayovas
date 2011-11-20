@@ -27,7 +27,8 @@
     -@colors.each do |series, colors|
       .series{:id => series.gsub(/[\s']/,'')}
         -colors.each do |c|
-          .color{:id=>"#{c.hex}",:style=>"background-color:#{c.hex};color:#{c.notes}"}=c.name
+          -name = series == 'wairo' ? "#{c.name}</br>#{c.subname}" : c.name
+          .color{:id=>"#{c.hex}",:style=>"background-color:#{c.hex};color:#{c.notes}"}=name
 
 %footer
   %a{:href => CREDIT[1]}= CREDIT[0]
