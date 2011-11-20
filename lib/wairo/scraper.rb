@@ -1,13 +1,12 @@
 # encoding: UTF-8
 require "nokogiri"
 require "open-uri"
-autoload :YAML, "psych"
-autoload :YAML, "yaml"
+require "yaml"
 
 module Wairo
   CURRENT_DIR = File.expand_path(File.dirname(__FILE__))
   class Scraper
-    URL = "http://www.colordic.org/w/"
+    URL = "http://www.colordic.org/w/?line=row"
     class << self
       def build
         @html ||= get(URL)
@@ -34,7 +33,7 @@ module Wairo
         q = Hash.new{ |h,k| h[k]=[] }
         table = html.css("table.colortable")
         table.css("td>a").each do |tda|
-          name, hex = tda.attr('title').split(/\s+/)
+          name, hex = tda.attr('title').strip.split(/\s+/)
           url = tda.attr('href')
           subname = tda.css('span').text
           rgb, notes = nil, nil
