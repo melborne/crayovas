@@ -17,7 +17,6 @@ class String
 end
 
 module Crayola
-  CURRENT_DIR = File.expand_path(File.dirname(__FILE__))
   class Scraper
     URL = "http://en.wikipedia.org/wiki/List_of_Crayola_crayon_colors"
     class << self
@@ -26,7 +25,7 @@ module Crayola
         parse @html
       end
 
-      def to_file(io=CURRENT_DIR+'/crayola.yml')
+      def to_file(io=CURRENT_DIR+'/crayola/crayola.yml')
         raise IOError, "File exist:#{io}" if File.exist?(io)
         File.open(io, 'w') { |f| YAML.dump build, f }
       end

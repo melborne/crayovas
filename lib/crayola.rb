@@ -1,6 +1,7 @@
 autoload :YAML, 'yaml'
 
 module Crayola
+  CURRENT_DIR = File.expand_path(File.dirname(__FILE__))
   require_relative 'crayola/scraper'
   require_relative 'crayola/color'
   class Crayola
@@ -32,8 +33,8 @@ module Crayola
         tmp
       end
 
-      def load_build_file(io=CURRENT_DIR+'/crayola.yml')
-        YAML.load open(io, 'r')
+      def load_build_file(io=CURRENT_DIR+'/crayola/crayola.yml')
+        YAML.load_file(io)
       rescue
         nil
       end
